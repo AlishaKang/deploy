@@ -309,12 +309,12 @@ sudo apt-get install -y nginx
 server_name *.amazonaws.com;
 
 location / {
-		uwsgi_pass unix:///home/ubuntu/{프로젝트이름}/tmp/{프로젝트이름}.sock;
+		uwsgi_pass unix:///home/ubuntu/insta/tmp/insta.sock;
 		include uwsgi_params;
 }
 
 location /static/ {
-	alias /home/ubuntu/{프로젝트이름}/staticfiles/;
+	alias /home/ubuntu/insta/staticfiles/;
 }
 ```
 
